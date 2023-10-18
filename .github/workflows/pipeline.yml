@@ -13,9 +13,9 @@ jobs:
 
     - name: Build
       run: |
-        cd app  # Navega para o diretório do seu projeto
+        cd app
         mvn package
-      working-directory: app  # Define o diretório de trabalho
+      working-directory: app
 
   publish:
     runs-on: ubuntu-latest
@@ -38,4 +38,4 @@ jobs:
         mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      working-directory: app  # Define o diretório de trabalho
+      working-directory: app
