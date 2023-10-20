@@ -15,7 +15,7 @@ jobs:
       run: |
         cd app
         mvn package
-      working-directory: app
+      #working-directory: app
 
   publish:
     runs-on: ubuntu-latest
