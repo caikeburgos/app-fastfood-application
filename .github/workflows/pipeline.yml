@@ -81,14 +81,14 @@ jobs:
     - name: Build and analyze
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.TESTEFIAP }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
         cd app
         mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=caikeburgos -Dsonar.login=$SONAR_TOKEN
 
     - name: Check Quality Gate
       env:
-        SONAR_TOKEN: ${{ secrets.TESTEFIAP }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
         QUALITY_GATE_STATUS=$(curl -s "https://sonarcloud.io/project/configuration?id=caikeburgos_app-fastfood-application" -H "Authorization: Basic $SONAR_TOKEN" | jq -r '.projectStatus.status')
         if [ "$QUALITY_GATE_STATUS" = "OK" ]; then
