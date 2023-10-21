@@ -90,7 +90,7 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.TESTEFIAP }}
       run: |
-        QUALITY_GATE_STATUS=$(curl -s "https://sonarcloud.io/api/qualitygates/project_status?projectKey=caikeburgos" -H "Authorization: Basic $SONAR_TOKEN" | jq -r '.projectStatus.status')
+        QUALITY_GATE_STATUS=$(curl -s "https://sonarcloud.io/project/configuration?id=caikeburgos_app-fastfood-application" -H "Authorization: Basic $SONAR_TOKEN" | jq -r '.projectStatus.status')
         if [ "$QUALITY_GATE_STATUS" = "OK" ]; then
           echo "QG OK"
         fi
