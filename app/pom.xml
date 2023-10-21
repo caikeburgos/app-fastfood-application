@@ -15,7 +15,7 @@
 	<description>FastFood Application</description>
 	<properties>
 		<java.version>17</java.version>
-		<sonar.host.url>'caikeburgos:br.com:app-fastfood': sonar.organization </sonar.host.url>
+		<sonar.host.url>caikeburgos:br.com:app-fastfood</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
