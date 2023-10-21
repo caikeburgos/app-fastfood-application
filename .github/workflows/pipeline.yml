@@ -21,7 +21,8 @@ jobs:
         java-version: '17'
         
     - name: Navigate to the 'app' directory
-      run: cd app
+      run: |
+        cd app
 
     - name: Run unit tests
       run: mvn test
