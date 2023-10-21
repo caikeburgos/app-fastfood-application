@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<sonar.host.url>https://sonarcloud.io/project/configuration?id=caikeburgos_app-fastfood-application</sonar.host.url>
+		<sonar.exclusions>**/target/**</sonar.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>
