@@ -22,10 +22,12 @@ jobs:
         
     - name: Navigate to the app directory
       run: |
-        cd app/.mvn/wrapper
+        cd app
 
     - name: Run unit tests
-      run: mvn test
+      run: |
+       cd app
+       mvn test
 
     - name: Generate JaCoCo Badge
       id: jacoco
