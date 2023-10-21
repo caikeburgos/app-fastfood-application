@@ -84,7 +84,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
         cd app
-        mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=caikeburgos -Dsonar.login=$SONAR_TOKEN
+        mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=caikeburgos_app-fastfood-application -Dsonar.login=$SONAR_TOKEN
 
     - name: Check Quality Gate
       env:
