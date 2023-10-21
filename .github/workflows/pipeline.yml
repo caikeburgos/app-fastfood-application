@@ -23,6 +23,7 @@ jobs:
     - name: Navigate to the 'app' directory
       run: |
         cd app
+        mvn package
 
     - name: Run unit tests
       run: mvn test
