@@ -20,10 +20,9 @@ jobs:
         distribution: 'corretto'
         java-version: '17'
         
-    - name: Navigate to the 'app' directory
+    - name: Navigate to the app directory
       run: |
         cd app
-        mvn package
 
     - name: Run unit tests
       run: mvn test
