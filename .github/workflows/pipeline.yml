@@ -74,8 +74,9 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('app/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
 
-    - name: Navigate to the 'app' directory
-      run: cd app
+    - name: Navigate to the app directory
+      run: |
+        cd app
 
     - name: Build and analyze
       env:
