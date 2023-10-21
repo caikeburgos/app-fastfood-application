@@ -22,7 +22,7 @@ jobs:
         
     - name: Navigate to the app directory
       run: |
-        cd app
+        cd app/.mvn/wrapper
 
     - name: Run unit tests
       run: mvn test
