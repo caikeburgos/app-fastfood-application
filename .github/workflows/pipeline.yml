@@ -109,12 +109,24 @@ jobs:
       run: |
         cd app
         mvn clean install 
-          
+
+      
     - name: Build2
       run: |
         cd app
         cd target
+        mkdir app
+        mv *.jar /app/app-fastfood.jar
+        cd app
         ls -la
+          
+    - name: Upload jar 
+      uses: actions/upload-artifact@v2
+      with:
+        name: app
+        path: '${{ github.workspace }}/app/app-fastfood.jar' 
+        
+     
         
       #working-directory: app
       
