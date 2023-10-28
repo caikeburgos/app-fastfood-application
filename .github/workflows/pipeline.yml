@@ -120,7 +120,7 @@ jobs:
 
     - name: Construir e Publicar Imagem Docker
       run: |
-        
-        docker build -t appfastfood:latest -f /infra/prod/Dockerfile .
+        cd app
+        docker build -t appfastfood:latest .
         docker push mvgv/appfastfood:latest
   
