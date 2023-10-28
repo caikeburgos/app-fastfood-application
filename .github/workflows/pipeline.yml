@@ -108,7 +108,10 @@ jobs:
     - name: Build
       run: |
         cd app
-        mvn package
+        mvn clean install 
+        cd target
+        ls -la
+        
       #working-directory: app
       
   publish:
