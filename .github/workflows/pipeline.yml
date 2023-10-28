@@ -93,6 +93,7 @@ jobs:
         curl -s "https://sonarcloud.io/project/configuration?id=caikeburgos_app-fastfood-application" -H "Authorization: Basic $SONAR_TOKEN"
          
   build:
+    needs: [teste-unitario]
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
