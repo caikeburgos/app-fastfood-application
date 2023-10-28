@@ -93,7 +93,7 @@ jobs:
         curl -s "https://sonarcloud.io/project/configuration?id=caikeburgos_app-fastfood-application" -H "Authorization: Basic $SONAR_TOKEN"
          
   build:
-    needs: [teste-unitario]
+    
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -141,7 +141,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Download jar 
-      uses: actions/upload-downloadartifact@v2
+      uses: actions/download-artifact@v2
       with:
         name: app
         path: '${{ github.workspace }}/app' 
