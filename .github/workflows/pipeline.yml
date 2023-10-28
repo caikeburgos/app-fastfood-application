@@ -116,6 +116,7 @@ jobs:
         cd app
         cd target
         mkdir app
+        chmod 777 /app
         mv *.jar /app
         cd app
         mv *.jar app-fastfood.jar
