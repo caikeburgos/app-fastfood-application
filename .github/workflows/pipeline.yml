@@ -116,6 +116,7 @@ jobs:
         cd app
         cd target
         mkdir app
+        ls -la
         chmod 777 /app
         mv *.jar /app
         cd app
