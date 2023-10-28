@@ -109,11 +109,6 @@ jobs:
       run: |
         cd app
         mvn clean install 
-
-      
-    - name: Build2
-      run: |
-        cd app
         cd target
         mkdir app
         ls -la
@@ -121,7 +116,10 @@ jobs:
         mv *.jar app
         cd app
         mv *.jar app-fastfood.jar
-        ls -la
+        ls -la 
+
+     
+ 
           
     - name: Upload jar 
       uses: actions/upload-artifact@v2
@@ -145,6 +143,12 @@ jobs:
       with:
         name: app
         path: '${{ github.workspace }}/app' 
+        
+    - name: Build2
+      run: |
+        cd app
+        ls -la      
+
         
     - name: Construir e Publicar Imagem Docker
       run: |
