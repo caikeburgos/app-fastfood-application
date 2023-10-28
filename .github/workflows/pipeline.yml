@@ -116,8 +116,9 @@ jobs:
         cd app
         cd target
         mkdir app
-        mv *.jar /app/app-fastfood.jar
+        mv *.jar /app
         cd app
+        mv *.jar app-fastfood.jar
         ls -la
           
     - name: Upload jar 
