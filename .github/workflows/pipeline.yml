@@ -109,6 +109,10 @@ jobs:
       run: |
         cd app
         mvn clean install 
+          
+    - name: Build2
+      run: |
+        cd app
         cd target
         ls -la
         
