@@ -120,9 +120,7 @@ jobs:
 
     - name: Construir e Publicar Imagem Docker
       run: |
+        cd infra/prod
         docker build -t appfastfood:latest .
-        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
-        docker push appfastfood:latest
-      env:
-        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        docker push mvgv/appfastfood:latest
+  
