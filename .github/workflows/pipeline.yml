@@ -140,6 +140,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Download jar 
+      uses: actions/upload-downloadartifact@v2
+      with:
+        name: app
+        path: '${{ github.workspace }}/app' 
+        
     - name: Construir e Publicar Imagem Docker
       run: |
         cd app
